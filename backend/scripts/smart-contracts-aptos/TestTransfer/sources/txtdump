@@ -1,0 +1,4 @@
+npx aptos move run \
+    --function-id "0x<your-account-address>::TestTransfer::transfer_apt" \
+    --args signer:<your-private-key> address:<recipient-address>
+
