@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #F7FCFE;
+  --foreground: #100c08;
+  --dark-cyan: #588b8bff;
+  --white: #ffffffff;
+  --apricot: #ffd5c2ff;
+  --tangerine: #f28f3bff;
+  --jasper: #c8553dff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #100c08;
+    --foreground: #F7FCFE;
+  }
+}
+
+.poppins {
+  font-family: var(--font-poppins);
+}
+
+.kode_mono {
+  font-family: var(--font-lekton);
+}
+
+.climate_crisis {
+  font-family: var(--font-climate-crisis);
+}
+
+.chakra_petch {
+  font-family: var(--font-chakra-petch);
+}
+
+.quantico {
+  font-family: var(--font-quantico);
+}
