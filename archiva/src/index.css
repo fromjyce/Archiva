@@ -1,6 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 :root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
   color-scheme: light dark;
-  background-color: #100c08;
+  background-color: #242424;
+
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -8,8 +14,107 @@
   --background: #100c08;
   --foreground: #F7FCFE;
   --dark-cyan: #588b8bff;
-  --white: #ffffffff;
+  --white: #f4f4f4;
   --apricot: #ffd5c2ff;
   --tangerine: #f28f3bff;
   --jasper: #c8553dff;
+  --hover-color: #F4F4F4;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+.popup-container {
+  text-align: center;
+  background-color: var(--background);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 90%;
+}
+
+.logo {
+  width: 150px;
+  height: 150px;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+.title {
+  font-size: 2rem;
+  color: var(--tangerine);
+  font-family: "Sora", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.connect-text {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  color: var(--foreground);
+  font-family: "Space Mono", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.auth-button {
+  display: flex;
+  font-family: "Space Mono", serif;
+  font-weight: 400;
+  font-style: normal;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 150px; /* Set a fixed width */
+  height: 50px; /* Set a fixed height */
+  font-size: 1rem;
+  background-color: var(--foreground);
+  color: var(--background);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-align: center;
+}
+
+.auth-button:hover {
+  background-color: var(--white);
+  transform: scale(1.05);
+}
+
+.icon {
+  font-size: 1.2rem;
+}
+
+.support-text {
+  font-size: 0.9rem;
+  color: var(--foreground);
+  font-family: "Space Mono", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.support-link {
+  color: var(--tangerine);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.support-link:hover {
+  text-decoration: underline;
 }
