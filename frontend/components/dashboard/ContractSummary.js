@@ -18,11 +18,11 @@ const ContractSummary = () => {
   };
 
   return (
-    <section className="bg-white shadow rounded-lg p-6">
-      <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+    <section className="bg-white shadow rounded-lg p-4 max-w-sm mx-auto">
+      <h2 className="text-xl font-semibold text-gray-800 mb-4">
         Contract Lifecycle Summary
       </h2>
-      <Pie data={data} />
+      <Pie data={data} width={200} height={200} />
     </section>
   );
 };

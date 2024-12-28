@@ -3,6 +3,10 @@ import NavigationMenu from '@/components/dashboard/NavigationMenu';
 import ContractSummary from '@/components/dashboard/ContractSummary';
 import NotificationCard from '@/components/dashboard/NotificationCard';
 import ContractTable from '@/components/dashboard/ContractTable';
+import LiveActivityFeed from '@/components/dashboard/LiveActivityFeed';
+import GasCostCalculator from '@/components/dashboard/GasCostCalculator';
+import RiskAlertSection from '@/components/dashboard/RiskAlertSection';
+import ContractActivityLog from '@/components/dashboard/ContractActivityLog';
 
 const Dashboard = () => {
   return (
@@ -33,9 +37,15 @@ const Dashboard = () => {
         </section>
 
         {/* Contracts Table */}
-        <section className="mt-8">
+        <section className="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-5">
+          <div>
           <h2 className="text-2xl font-semibold text-gray-800 mb-4">Your Contracts</h2>
           <ContractTable />
+          </div>
+          <LiveActivityFeed />
+  <RiskAlertSection />
+  <GasCostCalculator />
+  <ContractActivityLog />
         </section>
       </div>
     </div>
