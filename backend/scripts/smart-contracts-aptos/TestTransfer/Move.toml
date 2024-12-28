@@ -1,0 +1,16 @@
+[package]
+name = "TestTransfer"
+version = "1.0.0"
+authors = []
+
+[addresses]
+sender = "0x430968a8bda6b01272650faa4058f983e5c5f351895b06783e42bedec502b462"
+
+[dev-addresses]
+
+[dependencies.AptosFramework]
+git = "https://github.com/aptos-labs/aptos-framework.git"
+rev = "mainnet"
+subdir = "aptos-framework"
+
+[dev-dependencies]
