@@ -1,6 +1,6 @@
 # Archiva
 
-Archiva is a revolutionary platform leveraging blockchain technology, advanced cryptographic techniques, and machine learning to automate the archival and permanent-archival of smart contracts. By integrating cutting-edge tools like Chainlink Oracles, IPFS or Arweave for secure storage, zk-SNARKs for verification, and an AI-powered Flag Prediction model, Archiva ensures enhanced data privacy, regulatory compliance, and user-friendly interaction for decentralized applications (dApps).
+Archiva is a revolutionary platform leveraging Aptos technology, Move language and advanced cryptographic techniques, and machine learning to automate the archival and permanent-archival of smart contracts. By integrating cutting-edge tools like Chainlink Oracles, IPFS or Arweave for secure storage, zk-SNARKs for verification, and an AI-powered Flag Prediction model, Archiva ensures enhanced data privacy, regulatory compliance, and user-friendly interaction for decentralized applications (dApps).
 
 ## Key Features
 
@@ -28,7 +28,7 @@ Intuitive dashboards for contract management, policy configuration, and real-tim
 ## Architecture Overview
 
 **1. Blockchain**
-Utilizes Ethereum for smart contract execution and state management.
+Utilizes Aptos for smart contract execution and state management.
 
 **2. Decentralized Storage**
 IPFS for file integrity and content-based addressing.
@@ -40,10 +40,9 @@ Provides trusted, real-time external data feeds to trigger archival or permanent
 Integrated for secure, privacy-preserving verification during contract archival and data permanent-archival.
 
 **5. AI-Powered Flag Prediction Model**
-
-**Model Type:** Supervised learning (Ensembled model with employed Majority Voting Rule - Decision Tree, Random Forest, XG Boost)
-**Inputs:** Smart contract activity logs, usage metrics, and predefined criteria.
-**Outputs:** Binary prediction (Archive or Permanent-Archive).
+  - **Model Type:** Supervised learning (Ensembled model with employed Majority Voting Rule - Decision Tree, Random Forest, XG Boost)
+  - **Inputs:** Smart contract activity logs, usage metrics, and predefined criteria.
+  - **Outputs:** Binary prediction (Archive or Permanent-Archive).
 
 ## Technical Workflow:
 
