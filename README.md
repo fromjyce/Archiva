@@ -40,10 +40,9 @@ Provides trusted, real-time external data feeds to trigger archival or permanent
 Integrated for secure, privacy-preserving verification during contract archival and data permanent-archival.
 
 **5. AI-Powered Flag Prediction Model**
-
-**Model Type:** Supervised learning (Ensembled model with employed Majority Voting Rule - Decision Tree, Random Forest, XG Boost)
-**Inputs:** Smart contract activity logs, usage metrics, and predefined criteria.
-**Outputs:** Binary prediction (Archive or Permanent-Archive).
+  - **Model Type:** Supervised learning (Ensembled model with employed Majority Voting Rule - Decision Tree, Random Forest, XG Boost)
+  - **Inputs:** Smart contract activity logs, usage metrics, and predefined criteria.
+  - **Outputs:** Binary prediction (Archive or Permanent-Archive).
 
 ## Technical Workflow:
 
