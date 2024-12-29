@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import ContractDetailsModal from '@/components/contracts/ContractDetailsModal';
 import FilterBar from '@/components/contracts/FilterBar';
 import Sidebar from '@/components/Sidebar';
+import Head from 'next/head';
 
 const Contracts = () => {
   const [selectedContract, setSelectedContract] = useState(null);
@@ -59,8 +60,8 @@ const Contracts = () => {
           );
           return revertContracts;
         });
-      }, 30000);  // Revert delay
-    }, 2000);  // Verification delay
+      }, 30000);
+    }, 2000);
   };
   
 
@@ -72,44 +73,46 @@ const Contracts = () => {
       setTimeout(() => {
         const revertContracts = contracts.map((contract) => ({ ...contract, verified: false }));
         setContracts(revertContracts);
-      }, 30000); // Revert after 30 seconds
-    }, 2000); // Verification delay
+      }, 30000);
+    }, 2000);
   };
 
   const archivedContractsList = contracts.filter((contract) => contract.state === 'Archived');
 
   return (
-    <div className="min-h-screen bg-gray-100 flex">
+    <>
+    <Head><title>Archiva | Manage Contracts</title></Head>
+    <div className="min-h-screen bg-[#F7FCFE] flex">
       <Sidebar />
-      <div className="flex-1 ml-20">
-        <h1 className="text-4xl font-bold text-gray-800 mb-6 px-8 py-4">Manage Your Contracts</h1>
+      <div className="flex-1 ml-16">
+        <h1 className="text-4xl font-bold text-[#100c08] mt-6 mb-4 kode_mono px-8 py-4">Manage Your Contracts</h1>
         <div className="flex justify-between px-8">
-          <div className="flex-1 bg-blue-50 rounded-lg p-6 shadow-md mr-4">
-            <h2 className="text-2xl font-bold text-gray-800 mb-2">Wallet Address</h2>
-            <p className="text-xl text-gray-600 break-all">{walletAddress}</p>
-            <p className="text-lg text-gray-700 mt-4">
+          <div className="flex-1 bg-[#ffd5c2ff] rounded-lg p-6 shadow-md mr-4">
+            <h2 className="text-2xl font-bold text-[#100c08] mb-2 quantico">Wallet Address</h2>
+            <p className="text-xl text-[#343434] font-semibold break-all kode_mono">{walletAddress}</p>
+            <p className="text-lg text-gray-700 mt-4 quantico">
               <span className="font-medium">Balance:</span> {balance} APT
             </p>
           </div>
           <div className="flex-1 grid grid-cols-3 gap-4">
-            <div className="bg-white rounded-lg p-4 shadow-md">
-              <h3 className="text-lg font-bold text-gray-800">Total Contracts</h3>
-              <p className="text-2xl font-bold text-blue-500">{contracts.length}</p>
+            <div className="bg-[#ce6650] rounded-lg p-4 shadow-md">
+              <h3 className="text-lg font-bold text-center text-[#100c08] mb-2 quantico">Total Contracts</h3>
+              <p className="text-7xl text-center font-bold text-[#343434] chakra_petch">{contracts.length}</p>
             </div>
-            <div className="bg-white rounded-lg p-4 shadow-md">
-              <h3 className="text-lg font-bold text-gray-800">Average Archival Time</h3>
-              <p className="text-2xl font-bold text-blue-500">15 mins</p>
+            <div className="bg-[#ce6650] rounded-lg p-4 shadow-md">
+              <h3 className="text-lg font-bold text-center text-[#100c08] mb-2 quantico">Average Archival Time</h3>
+              <p className="text-4xl text-center font-bold text-[#343434] chakra_petch">15 mins</p>
             </div>
-            <div className="bg-white rounded-lg p-4 shadow-md">
-              <h3 className="text-lg font-bold text-gray-800">Gas Fees (Avg)</h3>
-              <p className="text-2xl font-bold text-blue-500">0.002 APT</p>
+            <div className="bg-[#ce6650] rounded-lg p-4 shadow-md">
+              <h3 className="text-lg font-bold  text-center text-[#100c08] mb-4 quantico">Gas Fees (Avg)</h3>
+              <p className="text-4xl text-center font-bold text-[#343434] chakra_petch">0.002 APT</p>
             </div>
           </div>
         </div>
         <div className="container mx-auto px-8 py-6">
-          <h2 className="text-3xl font-semibold text-gray-800 mb-4">Your Smart Contracts</h2>
+          <h2 className="text-3xl font-semibold text-[#100c08] mb-4 kode_mono">Your Smart Contracts</h2>
           <FilterBar filter={filter} setFilter={setFilter} />
-          <div className="bg-white shadow-md rounded-lg overflow-x-auto mt-6">
+          <div className="bg-[#588b8bff] shadow-md rounded-lg overflow-x-auto mt-6 poppins">
             <table className="table-auto w-full text-left">
               <thead>
                 <tr className="bg-gray-100">
@@ -128,13 +131,13 @@ const Contracts = () => {
                     <td className="border px-4 py-2">
                       <div className="flex space-x-2">
                         <button
-                          className="bg-green-500 text-white px-3 py-1 rounded"
+                          className="bg-[#228B22] text-[#F4f4f4] px-3 py-1 rounded"
                           onClick={() => handleArchive(contract.id)}
                         >
                           Archive
                         </button>
                         <button
-                          className="bg-blue-500 text-white px-3 py-1 rounded"
+                          className="bg-[#f28f3bff] text-[#343434] px-3 py-1 rounded"
                           onClick={() => setSelectedContract(contract)}
                         >
                           View Details
@@ -154,11 +157,11 @@ const Contracts = () => {
             />
           )}
         </div>
-        <div className="container mx-auto px-8 py-6 flex space-x-8">
+        <div className="container mx-auto px-8 py-2 flex space-x-8">
           <div className="flex-1">
-            <h2 className="text-3xl font-semibold text-gray-800 mb-4">Archived Contracts</h2>
-            <div className="bg-white shadow-md rounded-lg overflow-x-auto mt-6">
-              <table className="table-auto w-full text-left">
+            <h2 className="text-3xl font-semibold text-[#100c08] mb-4 kode_mono">Archived Contracts</h2>
+            <div className="bg-[#588b8bff] shadow-md rounded-lg overflow-x-auto mt-6">
+              <table className="table-auto w-full text-left poppins">
                 <thead>
                   <tr className="bg-gray-100">
                     <th className="px-4 py-2">Contract ID</th>
@@ -174,13 +177,13 @@ const Contracts = () => {
                       <td className="border px-4 py-2">
                         <div className="flex space-x-2">
                           <button
-                            className="bg-green-500 text-white px-3 py-1 rounded"
+                            className="bg-[#228B22] text-[#F4f4f4] px-3 py-1 rounded"
                             onClick={() => handleReinitiate(contract.id)}
                           >
                             Re-initiate
                           </button>
                           <button
-                            className="bg-blue-500 text-white px-3 py-1 rounded"
+                            className="bg-[#f28f3bff] text-[#343434] px-3 py-1 rounded"
                             onClick={() => setSelectedContract(contract)}
                           >
                             View Details
@@ -194,9 +197,9 @@ const Contracts = () => {
             </div>
           </div>
           <div className="flex-1">
-            <h2 className="text-3xl font-semibold text-gray-800 mb-4">Validate Your Blocks</h2>
+            <h2 className="text-3xl font-semibold text-[#100c08] mb-4 kode_mono">Validate Your Blocks</h2>
             <div className="bg-white shadow-md rounded-lg overflow-x-auto mt-6">
-              <table className="table-auto w-full text-left">
+              <table className="table-auto w-full text-left poppins">
                 <thead>
                   <tr className="bg-gray-100">
                     <th className="px-4 py-2">Contract ID</th>
@@ -214,7 +217,7 @@ const Contracts = () => {
                       <td className="border px-4 py-2">
                         <div className="flex space-x-2">
                           <button
-                            className="bg-green-500 text-white px-3 py-1 rounded"
+                            className="bg-[#228B22] text-[#F4f4f4] px-3 py-1 rounded"
                             onClick={() => handleVerify(contract.id)}
                           >
                             Verify
@@ -228,7 +231,7 @@ const Contracts = () => {
             </div>
             <div className="mt-6">
               <button
-                className="bg-blue-500 text-white px-4 py-2 rounded"
+                className="bg-[#f28f3bff] text-[#343434] px-4 py-2 rounded poppins"
                 onClick={handleVerifyAll}
               >
                 Verify All
@@ -238,6 +241,7 @@ const Contracts = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

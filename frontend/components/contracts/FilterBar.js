@@ -4,14 +4,14 @@ const FilterBar = ({ filter, setFilter }) => {
   const filters = ['All', 'Active', 'Archived', 'Destructed'];
 
   return (
-    <div className="mb-6 flex space-x-4">
+    <div className="mb-6 flex space-x-4 poppins">
       {filters.map((f) => (
         <button
           key={f}
           className={`px-4 py-2 rounded ${
             filter === f
-              ? 'bg-blue-500 text-white'
-              : 'bg-gray-200 text-gray-700 hover:bg-blue-100'
+              ? 'bg-[#c8553dff] text-[#f4f4f4]'
+              : 'bg-[#dcdcdc] text-[#343434] hover:bg-[#d37764]'
           }`}
           onClick={() => setFilter(f)}
         >
