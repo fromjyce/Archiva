@@ -1,4 +1,5 @@
 import "../app/globals.css";
+import Footer from "@/components/updatefooter";
 import {Poppins, Kode_Mono, Lekton, Climate_Crisis, Chakra_Petch, Quantico} from "next/font/google";
 
 const poppins_init = Poppins({
@@ -48,6 +49,7 @@ function MyApp({ Component, pageProps }) {
           <main>
             <Component {...pageProps} />
           </main>
+          <Footer/>
         </div>
       );
 }
