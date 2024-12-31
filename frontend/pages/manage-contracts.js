@@ -15,7 +15,7 @@ const Contracts = () => {
   ]);
 
   const [archivedContracts, setArchivedContracts] = useState([]);
-  const [walletAddress, setWalletAddress] = useState('0x430968a8bda6b01272650faa4058f983e5c5f351895b06783e42bedec502b462');
+  const [walletAddress, setWalletAddress] = useState('0x43b0876df4d5613828ae5064e034213153e080cf9eaa7ce1903c991dab19924b');
   const [balance, setBalance] = useState(3.979841); 
 
   const filteredContracts = filter === 'All' ? contracts : contracts.filter((contract) => contract.state === filter);
